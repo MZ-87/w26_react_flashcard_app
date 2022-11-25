@@ -1,0 +1,29 @@
+@import "../../style/variables.scss";
+
+.footer {
+    display: flex;
+    justify-content: center;
+    min-height: 80px;
+    bottom: 0;
+    background: linear-gradient(#eff7f9, #ace0f9);
+    color: $main-fontcolor;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+.img {
+    max-width: 50px;
+    margin: 0 2em;
+    border-radius: 50%;
+    background-color: rgb(129, 227, 227);
+}
+
+.text{
+    font-size: 1.2em;
+}
+
