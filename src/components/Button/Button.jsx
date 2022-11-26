@@ -1,9 +1,11 @@
 import React from 'react'
-import style from 'button.module.scss'
+import style from './button.module.scss'
 
 
-export default function Button() {
+export default function Button(props) {
     return (
-        <div>Button</div>
+        <div className={style.btn}>
+            <span className={style.text}>{props.text}</span>
+        </div>
     )
 }

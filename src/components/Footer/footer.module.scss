@@ -1,11 +1,12 @@
 @import "../../style/variables.scss";
+@import "../../style/mixins.scss";
 
 .footer {
     display: flex;
     justify-content: center;
     min-height: 80px;
     bottom: 0;
-    background: linear-gradient(#eff7f9, #ace0f9);
+    background: $bg-gradient;
     color: $main-fontcolor;
 }
 
@@ -19,11 +20,10 @@
 .img {
     max-width: 50px;
     margin: 0 2em;
-    border-radius: 50%;
-    background-color: rgb(129, 227, 227);
+    border-radius: 50%; 
 }
 
 .text{
-    font-size: 1.2em;
+    @include main-text (1.2em);
 }
 

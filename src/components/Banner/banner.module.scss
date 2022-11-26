@@ -1,0 +1,35 @@
+@import "../../style/variables.scss";
+@import "../../style/mixins.scss";
+
+
+.banner {
+    display: grid;
+    grid-template-columns: 5fr 2fr 2fr;
+    grid-template-rows: repeat(3, 2fr);
+    justify-content: flex-start;
+    min-height: 80vh;
+
+}
+
+.img {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    max-height: 600px;
+    border-radius: 50%;
+}
+
+.title {
+    grid-column: 2/4;
+    grid-row: 1/2;
+    margin: auto;
+    // font-weight: 600;
+    @include main-text(1.5em, 600);
+}
+
+.subtitle {
+    grid-column: 2/4;
+    grid-row: 2/3;
+    margin: auto;
+    // font-size: 1.2em;
+    @include main-text(1.2em);
+}

@@ -1,0 +1,24 @@
+@import "../../style/variables.scss";
+// @import "../../style/mixins.scss";
+
+.btn {
+    width: 250px;
+    height: 40px;
+    justify-self: center;
+    // align-self: center;
+    border-radius: 1em;
+    background-color: #ace0f9;
+    text-align: center;
+    
+
+    &:hover {
+        background-color: rgb(200, 140, 240);
+    }
+}
+
+.text{
+    font-size: 1.1em;
+    font-family: $main-font;
+    color: $main-fontcolor;
+}
+

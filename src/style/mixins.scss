@@ -2,3 +2,11 @@
     display: flex;
     align-items: center;
 }
+
+@mixin main-text ($font-size, $font-weight: 400) {
+    font-family: $main-font;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    text-align: justify;
+    line-height: 150%;
+}

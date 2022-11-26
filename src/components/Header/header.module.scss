@@ -1,10 +1,5 @@
 @import "../../style/variables.scss";
-// @import "../../style/mixins.scss";
-
-@mixin obj_position {
-    display: flex;
-    align-items: center;
-}
+@import "../../style/mixins.scss";
 
 .header,
 .logo,
@@ -15,7 +10,7 @@
 .header {
     min-height: 80px;
     justify-content: space-between;
-    background: linear-gradient(#eff7f9, #ace0f9);
+    background: $bg-gradient;
     color: $main-fontcolor;
 }
 
@@ -25,16 +20,22 @@
 }
 
 .title {
-    font-size: 1.8em;
+    @include main-text (1.8em);
 }
 
 .nav {
-    margin-right: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
     a {
-        margin-right: 2.5em;
-        font-size: 1.2em;
+        margin: auto 1.1em; 
         text-decoration: none;
         color: $main-fontcolor;
+        @include main-text (1.2em);
+
+        &:hover {
+            color: rgb(218, 19, 135);
+        }
     }
 }

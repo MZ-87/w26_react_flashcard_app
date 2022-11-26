@@ -6,14 +6,14 @@ export default function Header() {
         <div className={style.header}>
             <div className={style.logo}>
                 <img className={style.img} src='./assets/studying.png' alt='logo' />
-                <div className={style.title}>Learning English words</div>
+                <div className={style.title}>Flying cards</div>
             </div>
             <div className={style.nav}>
-                {/* <a href='#'>Wordlist</a>
-                <a href='#'>Cards</a> */}
+                <div><a href='#'>Список слов</a></div>
+                <div><a href='#'>Карточки</a></div>
+                <div><a href='#'>Тренировка</a></div>
             </div>
         </div>
     )
 }
 
-// взять картинки у ани
