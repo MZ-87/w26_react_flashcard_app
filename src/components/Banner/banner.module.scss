@@ -22,7 +22,6 @@
     grid-column: 2/4;
     grid-row: 1/2;
     margin: auto;
-    // font-weight: 600;
     @include main-text(1.5em, 600);
 }
 
@@ -30,6 +29,5 @@
     grid-column: 2/4;
     grid-row: 2/3;
     margin: auto;
-    // font-size: 1.2em;
     @include main-text(1.2em);
 }
