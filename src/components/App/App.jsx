@@ -1,8 +1,12 @@
 import React from 'react'
 import Header from '../Header/Header'
-// import Banner from '../Banner/Banner'
-import Error from '../Error/Error'
 import Footer from '../Footer/Footer'
+// import Banner from '../Banner/Banner'
+// import Error from '../Error/Error'
+import ListHeader from '../ListHeader/ListHeader'
+import Wordlist from '../Wordlist/Wordlist'
+import Button from '../Button/Button'
+import words from '../data/words.json'
 import style from './app.module.scss'
 
 function App() {
@@ -10,7 +14,12 @@ function App() {
     <div className={style.App}>
       <Header />
       {/* <Banner /> */}
-      <Error />
+      {/* <Error /> */}
+      <ListHeader />
+      {words.map((word) => {
+        return <Wordlist key={word.id} word={word.word} translate={word.translate} transcription={word.transcription} tag={word.tag} />
+      })}
+      <Button text={'Добавить'} />
       <Footer />
     </div>
   );

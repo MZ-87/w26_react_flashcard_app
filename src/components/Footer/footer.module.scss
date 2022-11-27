@@ -1,7 +1,7 @@
 @import "../../style/variables.scss";
 @import "../../style/mixins.scss";
 
-.footer {
+.container {
     display: flex;
     justify-content: center;
     min-height: 80px;
@@ -10,7 +10,7 @@
     color: $main-fontcolor;
 }
 
-.container {
+.item {
     display: flex;
     justify-content: center;
     align-items: center;

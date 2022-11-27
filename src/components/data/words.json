@@ -1,0 +1,22 @@
+[{
+        "id": 1,
+        "word": "arm",
+        "transcription": "[ɑ:m]",
+        "translate": "рука",
+        "tag": "часть тела"
+    }, {
+        "id": 2,
+        "word": "abdomen",
+        "transcription": "[ˈæbdəmən]",
+        "translate": "живот",
+        "tag": "анатомия"
+
+    },
+    {
+        "id": 3,
+        "word": "ankle",
+        "transcription": "[ˈæŋkl̩]",
+        "value": "голеностоп",
+        "tag": "анатомия"
+    }
+]

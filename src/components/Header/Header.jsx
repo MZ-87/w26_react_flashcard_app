@@ -3,7 +3,7 @@ import style from './header.module.scss'
 
 export default function Header() {
     return (
-        <div className={style.header}>
+        <div className={style.container}>
             <div className={style.logo}>
                 <img className={style.img} src='./assets/studying.png' alt='logo' />
                 <div className={style.title}>Flying cards</div>

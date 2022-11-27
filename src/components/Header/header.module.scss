@@ -1,13 +1,13 @@
 @import "../../style/variables.scss";
 @import "../../style/mixins.scss";
 
-.header,
+.container ,
 .logo,
 .nav {
     @include obj_position;
 }
 
-.header {
+.container {
     min-height: 80px;
     justify-content: space-between;
     background: $bg-gradient;
