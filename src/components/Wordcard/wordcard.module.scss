@@ -24,13 +24,17 @@
     width: 80%;
     min-height: 250px;
     margin: auto;
+    padding: 1em;
     background: #fff;
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
     border-radius: 16px;
     cursor: pointer;
     // perspective: 1000;
 }
-
+.translate,
+.transcription{
+    font-weight: 400;
+}
 .prev_btn,
 .next_btn{
     background-color: $bg-color;

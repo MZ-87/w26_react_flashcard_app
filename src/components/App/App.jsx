@@ -21,7 +21,7 @@ function App() {
       {words.map((word) => {
         return <Wordlist key={word.id} word={word.word} translate={word.translate} transcription={word.transcription} tag={word.tag} />
       })} */}
-      <Wordcard word={'pineapple'} />
+      <Wordcard word={'abdomen'} transcription={'[ˈæbdəmən]'} translate={'живот'} />
       <Footer />
     </div>
   );

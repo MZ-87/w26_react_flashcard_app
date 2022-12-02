@@ -9,6 +9,10 @@ export default function Header() {
                 <div className={style.title}>Flying cards</div>
             </div>
             <div className={style.nav}>
+                {/* <div>Список слов</div>
+                <div>Карточки</div>
+                <div>Тренировка</div> */}
+
                 <div><a href='#'>Список слов</a></div>
                 <div><a href='#'>Карточки</a></div>
                 <div><a href='#'>Тренировка</a></div>
