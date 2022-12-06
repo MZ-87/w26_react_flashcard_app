@@ -2,3 +2,9 @@
     max-width: 60%;
     margin: auto;
 }
+
+.addBtn{
+    display: grid;
+    grid-template-columns: repeat(4, 15%) 30%;
+    justify-content: center;
+}
