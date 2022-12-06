@@ -19,12 +19,6 @@ export default function Wordcard(
     <Button text={'Показать перевод'} />
   }
 
-  // const [pressed, setPressed] = useState(false);
-  // const handleClick = () => {
-  //   setPressed((prevState) => {
-  //     prevState = !prevState;
-  //   })
-  // }
 
   // let actionItem;
   // if (pressed) {
