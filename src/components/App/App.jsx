@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
-// import Banner from '../Banner/Banner'
 // import Error from '../Error/Error'
 import Wordcard from '../Wordcard/Wordcard'
 // import ListHeader from '../ListHeader/ListHeader'
