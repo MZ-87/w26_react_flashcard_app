@@ -3,8 +3,6 @@ import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 // import Error from '../Error/Error'
 import Wordcard from '../Wordcard/Wordcard'
-// import Wordlist from '../Wordlist/Wordlist'
-// import Button from '../Button/Button'
 // import words from '../data/words.json'
 import style from './app.module.scss'
 

@@ -2,36 +2,31 @@ import React, { useState } from 'react'
 import Button from '../Button/Button'
 import style from './wordcard.module.scss'
 
-export default function Wordcard(
-  props) {
-  // показываем перевод
-  const showTranslation = () => {
-    return (
-      <div>
-        <h3 className={style.translate}>{props.translate}</h3>
-        <Button text={'Скрыть перевод'} onClick={hideTranslation} />
-      </div>
-    )
+
+// показываем перевод
+const showTranslation = (props) => {
+  return (
+    <div>
+      <h3 className={style.translate}>{props.translate}</h3>
+      <Button text={'Скрыть перевод'} />
+    </div >
+  )
+}
+
+// показываем кнопку
+const hideTranslation = (props) => {
+  return <Button text={'Показать перевод'} />
+}
+
+export default function Wordcard(props) {
+  let actionItem;
+  //состояние
+  const [clicked, setClicked] = useState(false);
+  const handleClick = () => {
+    setClicked((prevState) => !prevState);
   }
-
-  //показываем кнопку
-  const hideTranslation = () => {
-    <Button text={'Показать перевод'} />
-  }
-
-  // const [pressed, setPressed] = useState(false);
-  // const handleClick = () => {
-  //   setPressed((prevState) => {
-  //     prevState = !prevState;
-  //   })
-  // }
-
-  // let actionItem;
-  // if (pressed) {
-  //   actionItem = <h3 className={style.translate}>{props.translate}</h3>;
-  // } else {
-  //   actionItem = <Button text={'Показать перевод'} pressed={pressed} setPressed={setPressed} onClick={handleClick} />;
-  // }
+  //условие
+  actionItem = clicked ? showTranslation() : ''
 
   return (
     <div className={style.main}>
@@ -41,8 +36,9 @@ export default function Wordcard(
           <h3 className={style.word}>{props.word}</h3>
           <h3 className={style.transcription}>{props.transcription}</h3>
           {/* <h3 className={style.translate}>{props.translate}</h3> */}
-          <Button text={'Показать перевод'} onClick={showTranslation} />
           {actionItem}
+          <Button text={'Показать перевод'} onClick={handleClick} />
+
         </div>
         <button className={style.next_btn}><img src="./assets/arrow_forward_icon.png" alt="arrow forward" className={style.nav_btn} /></button>
       </div>
