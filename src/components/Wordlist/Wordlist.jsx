@@ -17,27 +17,7 @@ export default function Wordlist(props) {
     )
 }
 
-// при нажатии на кнопку Добавить
-// export default function Wordlist(props) {
-//     return (
-//         <>
-//             <ListHeader />
-//             <div className={style.container}>
-//                 <input className={style.input}></input>
-//                 <input className={style.input}></input>
-//                 <input className={style.input}></input>
-//                 <input className={style.input}></input>
-//                 <div className={style.buttons}>
-//                     <Button text={'Сохранить'} />
-//                     <Button text={'Отмена'} />
-//                 </div>
-//             </div >
-
-//         </>
-//     )
-// }
-
-// при нажатии на кнопку Изменить
+// при нажатии на кнопку Редактировать
 // export default function Wordlist(props) {
 //     return (
 //         <>
