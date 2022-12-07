@@ -1,7 +1,7 @@
 @import "../../style/variables.scss";
 @import "../../style/mixins.scss";
 
-.main{
+.main {
     background: $bg-color;
     display: flex;
     align-items: center;
@@ -10,13 +10,13 @@
     flex-flow: column wrap;
 }
 
-.container{
+.container {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     min-width: 90%;
 }
 
-.wordbox{
+.wordbox {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,17 +31,22 @@
     cursor: pointer;
     // perspective: 1000;
 }
-.translate,
-.transcription{
+
+.word {
+    @include main-text(1.3em, 700)
+}
+
+// .translate,
+.transcription {
     font-weight: 400;
 }
+
 .prev_btn,
-.next_btn{
+.next_btn {
     background-color: $bg-color;
     border: none;
 }
 
-.nav_btn{
+.nav_btn {
     max-height: 50px;
 }
-

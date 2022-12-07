@@ -1,0 +1,32 @@
+@import "../../style/variables.scss";
+@import "../../style/mixins.scss";
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 40px;
+    border-radius: 1em;
+    border: none;
+    background-color: #ace0f9;
+    text-align: center;
+    font-size: 1em;
+    font-family: $main-font;
+    color: $main-fontcolor;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(200, 140, 240);
+    }
+
+    &:active {
+        background-color: rgb(240, 232, 140);
+    }
+}
+
+.translate {
+    padding: 1em;
+    @include main-text(1.2em);
+    color: $main-fontcolor;
+}
