@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-// import BtnAdd from '../BtnAdd/BtnAdd'
-// import Button from '../Button/Button'
 import style from './addword.module.scss'
 
 export default function AddWord(props) {
