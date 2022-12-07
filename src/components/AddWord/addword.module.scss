@@ -2,18 +2,11 @@
 @import "../../style/mixins.scss";
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(4, 15%) 30%;
-    justify-content: center;
-    padding: 0;
-    column-gap: 0.5em;
-    font-family: $main-font;
-    font-size: 1.1em;
-    color: $main-fontcolor;
-    text-align: center;
-    margin-bottom: 1.2em;
+    @include word_container;
+    // margin-bottom: 0.8em;
 }
-.pseudoBtn{
+
+.pseudoBtn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,29 +17,14 @@
 }
 
 .buttons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5em;
+    @include btn_group;
+    margin-bottom: 0.8em;
+}
+
+.btn {
+    @include btn;
 }
 
 .input {
-    margin: 15px 0;
-    height: 40px;
-    padding-left: 1em;
-    border: none;
-    border-radius: 1em;
-    background-color: rgb(245, 245, 245);
-
-    &:focus {
-        border: 2px solid #713bc1;
-        outline: none;
-    }
-    &:hover{
-        background-color: rgb(210, 208, 208); 
-    }
-}
-
-.btn{
-    @include btn;
+    @include input;
 }
