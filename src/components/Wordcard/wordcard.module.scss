@@ -29,14 +29,12 @@
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
     border-radius: 16px;
     cursor: pointer;
-    // perspective: 1000;
 }
 
 .word {
     @include main-text(1.3em, 700)
 }
 
-// .translate,
 .transcription {
     font-weight: 400;
 }

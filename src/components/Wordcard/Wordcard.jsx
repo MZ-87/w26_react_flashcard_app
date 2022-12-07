@@ -2,30 +2,6 @@ import React from 'react'
 import BtnTranslate from '../BtnTranslate/BtnTranslate'
 import style from './wordcard.module.scss'
 
-// // показываем перевод
-// const showTranslation = (props) => {
-//   return (
-//     <div>
-//       <h3 className={style.translate}>{props.translate}</h3>
-//       <Button text={'Скрыть перевод'} />
-//     </div >
-//   )
-// }
-
-// // показываем кнопку
-// const hideTranslation = (props) => {
-//   return <Button text={'Показать перевод'} />
-// }
-
-// let actionItem;
-// //состояние
-// const [clicked, setClicked] = useState(false);
-// const handleClick = () => {
-//   setClicked((prevState) => !prevState);
-// }
-// //условие
-// actionItem = clicked ? showTranslation() : ''
-
 export default function Wordcard(props) {
   return (
     <div className={style.main}>
