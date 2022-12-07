@@ -10,3 +10,28 @@
     text-align: justify;
     line-height: 150%;
 }
+
+@mixin btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 40px;
+    margin: 0.85em;
+    border-radius: 1em;
+    border: none;
+    background-color: #ace0f9;
+    text-align: center;
+    font-size: 1em;
+    font-family: $main-font;
+    color: $main-fontcolor;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(200, 140, 240);
+    }
+
+    &:active {
+        background-color: rgb(240, 232, 140);
+    }
+}
