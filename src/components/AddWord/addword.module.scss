@@ -31,15 +31,18 @@
 }
 
 .input {
-    margin: 15px 15px 15px 15px;
+    margin: 15px 0;
     height: 40px;
-    padding-left: 15px;
+    padding-left: 1em;
     border: none;
-    border-radius: 16px;
+    border-radius: 1em;
     background-color: rgb(245, 245, 245);
 
     &:focus {
         border: 2px solid #713bc1;
         outline: none;
+    }
+    &:hover{
+        background-color: rgb(210, 208, 208); 
     }
 }
