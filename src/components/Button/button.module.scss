@@ -1,20 +1,21 @@
 @import "../../style/variables.scss";
-// @import "../../style/mixins.scss";
+@import "../../style/mixins.scss";
 
 .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 250px;
-    height: 40px;
-    border-radius: 1em;
-    background-color: #ace0f9;
-    text-align: center;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // width: 250px;
+    // height: 40px;
+    // border-radius: 1em;
+    // background-color: #ace0f9;
+    // text-align: center;
     
 
-    &:hover {
-        background-color: rgb(200, 140, 240);
-    }
+    // &:hover {
+    //     background-color: rgb(200, 140, 240);
+    // }
+    @include btn;
 }
 
 .text{
