@@ -1,25 +1,31 @@
 import React, { useState } from 'react'
 // import BtnAdd from '../BtnAdd/BtnAdd'
-import Button from '../Button/Button'
+// import Button from '../Button/Button'
 import style from './addword.module.scss'
 
 export default function AddWord(props) {
-    const [pressed, setPressed] = useState(false)
-    const handleClick = () => {
-        setPressed(!pressed);
+    // const [pressed, setPressed] = useState(false)
+    const [isEditMode, setIsEditMode] = useState(false);
+
+    const handleEditMode = () => {
+        setIsEditMode(!isEditMode);
     };
+
+    const handleCancel = () => {
+        setIsEditMode(!isEditMode);
+    }
 
     return (
         <div className={style.container}>
-            {pressed ? (
+            {isEditMode ? (
                 <>
                     <input type="text" className={style.input}></input>
                     <input type="text" className={style.input}></input>
                     <input type="text" className={style.input}></input>
                     <input type="text" className={style.input}></input>
                     <div className={style.buttons}>
-                        <Button text={'Сохранить'} />
-                        <Button text={'Отмена'} />
+                        <button className={style.btn} >Сохранить</button>
+                        <button className={style.btn} onClick={handleCancel}>Отмена</button>
                     </div>
                 </>
             ) : (
@@ -30,7 +36,7 @@ export default function AddWord(props) {
                     <div></div>
                     <div className={style.buttons}>
                         <div className={style.pseudoBtn}></div>
-                        <button className={style.btn} onClick={handleClick}>Добавить</button>
+                        <button className={style.btn} onClick={handleEditMode}>Добавить</button>
                     </div>
                 </>
             )}
