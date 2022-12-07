@@ -29,7 +29,8 @@
 }
 
 .translate {
-    padding: 1em;
+    // padding: 1em;
+    margin: 1em;
     @include main-text(1.2em);
     color: $main-fontcolor;
 }
