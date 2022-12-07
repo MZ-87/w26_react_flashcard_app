@@ -1,22 +1,26 @@
 import React, { useState } from 'react'
-// import BtnHideTranslation from '../BtnHideTranslation/BtnHideTranslation'
 import style from './btntranslate.module.scss'
 
 export default function BtnTranslate(props) {
-    const [pressed, setPressed] = useState(false)
+    const [isPressed, setPressed] = useState(false)
     const handleClick = () => {
-        setPressed(!pressed);
+        setPressed(!isPressed);
+    };
+
+    const handleCancel = () => {
+        setPressed(!isPressed);
     };
 
     return (
         <>
-            {pressed ?
+            {isPressed ?
                 <div className={style.translate}>
                     <span>{props.translate}</span>
-                    {/* <BtnHideTranslation /> */}
+                    <button className={style.btn} onClick={handleCancel}>Скрыть перевод</button>
                 </div> :
                 <button className={style.btn} onClick={handleClick}>Показать перевод</button>}
         </>
     );
 }
 
+//дописать стили, а то перевод не по центру
