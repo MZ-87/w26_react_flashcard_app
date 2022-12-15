@@ -1,58 +1,42 @@
-import React from 'react'
-import Button from '../Button/Button'
+import React, { useState } from 'react'
 import style from './wordlist.module.scss'
 
 export default function Wordlist(props) {
+    const [isEditMode, setIsEditMode] = useState(false);
+
+    const handleEditMode = () => {
+        setIsEditMode(!isEditMode);
+    };
+
+    const handleCancel = () => {
+        setIsEditMode(!isEditMode);
+    }
+
     return (
         <div className={style.container}>
-            <div className={style.item}>{props.word}</div>
-            <div className={style.item}>{props.translate}</div>
-            <div className={style.item}>{props.transcription}</div>
-            <div className={style.item}>{props.tag}</div>
-            <div className={style.buttons}>
-                <Button text={'Редактировать'} />
-                <Button text={'Удалить'} />
-            </div>
+            {isEditMode ? (
+                <>
+                    <input className={style.input} placeholder={props.word}></input>
+                    <input className={style.input} placeholder={props.translate}></input>
+                    <input className={style.input} placeholder={props.transcription}></input>
+                    <input className={style.input} placeholder={props.tag}></input>
+                    <div className={style.buttons}>
+                        <button className={style.btn} >Сохранить</button>
+                        <button className={style.btn} onClick={handleCancel}>Отмена</button>
+                    </div>
+                </>
+            ) : (
+                <>
+                    <div className={style.item}>{props.word}</div>
+                    <div className={style.item}>{props.translate}</div>
+                    <div className={style.item}>{props.transcription}</div>
+                    <div className={style.item}>{props.tag}</div>
+                    <div className={style.buttons}>
+                        <button className={style.btn} onClick={handleEditMode}>Редактировать</button>
+                        <button className={style.btn} >Удалить</button>
+                    </div>
+                </>
+            )}
         </div >
     )
 }
-
-// при нажатии на кнопку Добавить
-// export default function Wordlist(props) {
-//     return (
-//         <>
-//             <ListHeader />
-//             <div className={style.container}>
-//                 <input className={style.input}></input>
-//                 <input className={style.input}></input>
-//                 <input className={style.input}></input>
-//                 <input className={style.input}></input>
-//                 <div className={style.buttons}>
-//                     <Button text={'Сохранить'} />
-//                     <Button text={'Отмена'} />
-//                 </div>
-//             </div >
-
-//         </>
-//     )
-// }
-
-// при нажатии на кнопку Изменить
-// export default function Wordlist(props) {
-//     return (
-//         <>
-//             <ListHeader />
-//             <div className={style.container}>
-//                 <input className={style.input} placeholder={props.word}></input>
-//                 <input className={style.input} placeholder={props.translate}></input>
-//                 <input className={style.input} placeholder={props.transcription}></input>
-//                 <input className={style.input} placeholder={props.tag}></input>
-//                 <div className={style.buttons}>
-//                     <Button text={'Сохранить'} />
-//                     <Button text={'Отмена'} />
-//                 </div>
-//             </div >
-
-//         </>
-//     )
-// }

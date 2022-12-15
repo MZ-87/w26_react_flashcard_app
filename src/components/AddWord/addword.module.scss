@@ -3,23 +3,22 @@
 
 .container {
     @include word_container;
+    // margin-bottom: 0.8em;
 }
 
-.item {
+.pseudoBtn {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    margin: 0.8em 0;
+    justify-content: center;
+    width: 250px;
     height: 40px;
-    // min-width: max-content;
-    padding-left: 1em;
-    border: none;
     border-radius: 1em;
-    background-color: rgb(245, 245, 245);
+    text-align: center;
 }
 
 .buttons {
-    @include btn_group
+    @include btn_group;
+    margin-bottom: 0.8em;
 }
 
 .btn {

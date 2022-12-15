@@ -3,11 +3,12 @@ import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 // import Banner from '../Banner/Banner'
 // import Error from '../Error/Error'
-import Wordcard from '../Wordcard/Wordcard'
-// import ListHeader from '../ListHeader/ListHeader'
-// import Wordlist from '../Wordlist/Wordlist'
+// import Wordcard from '../Wordcard/Wordcard'
+import ListHeader from '../ListHeader/ListHeader'
+import Wordlist from '../Wordlist/Wordlist'
+import AddWord from '../AddWord/AddWord'
 // import Button from '../Button/Button'
-// import words from '../data/words.json'
+import words from '../data/words.json'
 import style from './app.module.scss'
 
 function App() {
@@ -16,15 +17,15 @@ function App() {
       <Header />
       {/* <Banner /> */}
       {/* <Error /> */}
-      {/* <ListHeader />
-      <Button text={'Добавить слово'} />
+      <ListHeader />
+      <AddWord />
       {words.map((word) => {
         return <Wordlist key={word.id} word={word.word} translate={word.translate} transcription={word.transcription} tag={word.tag} />
-      })} */}
-      <Wordcard word={'abdomen'} transcription={'[ˈæbdəmən]'} translate={'живот'} />
+      })}
+      {/* <Wordcard word={'abdomen'} transcription={'[ˈæbdəmən]'} translate={'живот'} /> */}
       <Footer />
     </div>
   );
 }
 
-export default App;
+export default App
