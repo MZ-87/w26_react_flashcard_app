@@ -1,4 +1,10 @@
 import React from 'react'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from 'react-router-dom'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 // import Banner from '../Banner/Banner'
@@ -12,18 +18,20 @@ import style from './app.module.scss'
 
 function App() {
   return (
-    <div className={style.App}>
-      <Header />
-      {/* <Banner /> */}
-      {/* <Error /> */}
-      {/* <ListHeader />
+    <Router>
+      <div className={style.App}>
+        <Header />
+        {/* <Banner /> */}
+        {/* <Error /> */}
+        {/* <ListHeader />
       <Button text={'Добавить слово'} />
       {words.map((word) => {
         return <Wordlist key={word.id} word={word.word} translate={word.translate} transcription={word.transcription} tag={word.tag} />
       })} */}
-      <Wordcard word={'abdomen'} transcription={'[ˈæbdəmən]'} translate={'живот'} />
-      <Footer />
-    </div>
+        <Wordcard word={'abdomen'} transcription={'[ˈæbdəmən]'} translate={'живот'} />
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

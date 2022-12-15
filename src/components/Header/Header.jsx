@@ -1,4 +1,10 @@
 import React from 'react'
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link
+} from 'react-router-dom'
 import style from './header.module.scss'
 
 export default function Header() {
@@ -9,13 +15,13 @@ export default function Header() {
                 <div className={style.title}>Flying cards</div>
             </div>
             <div className={style.nav}>
-                <div>Список слов</div>
+                {/* <div>Список слов</div>
                 <div>Карточки</div>
-                <div>Тренировка</div>
+                <div>Тренировка</div> */}
 
-                {/* <div><a href='#'>Список слов</a></div>
-                <div><a href='#'>Карточки</a></div>
-                <div><a href='#'>Тренировка</a></div> */}
+                <Link to="/wordlist">Список слов</Link>
+                <Link to="/cards">Карточки</Link>
+                <Link to="/training">Тренировка</Link>
             </div>
         </div>
     )
