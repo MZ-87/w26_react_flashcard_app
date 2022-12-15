@@ -15,13 +15,10 @@ export default function Header() {
                 <div className={style.title}>Flying cards</div>
             </div>
             <div className={style.nav}>
-                {/* <div>Список слов</div>
-                <div>Карточки</div>
-                <div>Тренировка</div> */}
-
-                <Link to="/wordlist">Список слов</Link>
-                <Link to="/cards">Карточки</Link>
-                <Link to="/training">Тренировка</Link>
+                <div className={style.link}><Link to="/">На главную</Link></div>
+                <div className={style.link}><Link to="/wordlist">Список слов</Link></div>
+                <div className={style.link}><Link to="/cards">Карточки</Link></div>
+                <div className={style.link}><Link to="/training">Тренировка</Link></div>
             </div>
         </div>
     )
