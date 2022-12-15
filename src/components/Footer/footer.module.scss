@@ -8,6 +8,10 @@
     bottom: 0;
     background: $bg-gradient;
     color: $main-fontcolor;
+    /* new */
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
 }
 
 .item {

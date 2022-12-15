@@ -1,7 +1,7 @@
 @import "../../style/variables.scss";
 @import "../../style/mixins.scss";
 
-.container ,
+.container,
 .logo,
 .nav {
     @include obj_position;
@@ -12,6 +12,10 @@
     justify-content: space-between;
     background: $bg-gradient;
     color: $main-fontcolor;
+    /* new */
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .img {
@@ -29,7 +33,7 @@
     justify-content: center;
 
     a {
-        margin: auto 1.1em; 
+        margin: auto 1.1em;
         text-decoration: none;
         color: $main-fontcolor;
         @include main-text (1.2em);
