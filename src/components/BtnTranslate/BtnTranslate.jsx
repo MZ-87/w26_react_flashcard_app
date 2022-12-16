@@ -7,16 +7,13 @@ export default function BtnTranslate(props) {
         setPressed(!isPressed);
     };
 
-    // const handleCancel = () => {
-    //     setPressed(!isPressed);
-    // };
+    const handleCancel = () => {
+        setPressed(!isPressed);
+    };
 
     const ShowTranslation = () => {
         return (
-            <div className={style.translate}>
-                <span>{props.translate}</span>
-                {/* <button className={style.btn} onClick={handleCancel}>Скрыть перевод</button> */}
-            </div>
+            <button className={style.btn} onClick={handleCancel}><span className={style.translate}>{props.translate}</span></button>
         )
     }
     const HideTranslation = () => {

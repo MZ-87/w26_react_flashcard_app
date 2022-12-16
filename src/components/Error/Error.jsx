@@ -16,7 +16,7 @@ export default function Error() {
             <img src="./assets/error404.png" alt="" className={style.img} />
             <div className={style.subtitle}>Мы скоро это исправим, а пока давай вернемся в начало</div>
             {/* <Button text={'На главную'} onClick={handleClick} /> */}
-            <div className={style.link}><Link to="/">На главную</Link></div>
+            <div className={style.link}><Link to="/" style={{ textDecoration: 'none', color: '#00072d' }}>На главную</Link></div>
         </div >
     )
 }
