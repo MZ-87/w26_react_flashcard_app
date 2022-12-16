@@ -7,20 +7,24 @@ export default function BtnTranslate(props) {
         setPressed(!isPressed);
     };
 
-    const handleCancel = () => {
-        setPressed(!isPressed);
-    };
+    // const handleCancel = () => {
+    //     setPressed(!isPressed);
+    // };
 
-    return (
-        <>
-            {isPressed ?
-                <div className={style.translate}>
-                    <span>{props.translate}</span>
-                    <button className={style.btn} onClick={handleCancel}>Скрыть перевод</button>
-                </div> :
-                <button className={style.btn} onClick={handleClick}>Показать перевод</button>}
-        </>
-    );
+    const ShowTranslation = () => {
+        return (
+            <div className={style.translate}>
+                <span>{props.translate}</span>
+                {/* <button className={style.btn} onClick={handleCancel}>Скрыть перевод</button> */}
+            </div>
+        )
+    }
+    const HideTranslation = () => {
+        return (
+            <button className={style.btn} onClick={handleClick}>Показать перевод</button>
+        )
+    }
+
+    return isPressed ? <ShowTranslation /> : <HideTranslation />;
 }
 
-//дописать стили, а то перевод не по центру
