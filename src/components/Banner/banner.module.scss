@@ -8,23 +8,24 @@
     grid-template-rows: repeat(3, 2fr);
     justify-content: flex-start;
     min-height: 80vh;
-
+    background: $bg-color;
 }
 
 .img {
     grid-column: 1/2;
     grid-row: 1/4;
-    max-height: 600px;
+    max-height: 500px;
     align-self: center;
-    // justify-self: center;
+    // justify-self: start;
     border-radius: 50%;
+    z-index: 1;
 }
 
 .title {
     grid-column: 2/4;
     grid-row: 1/2;
     margin: auto 2em 0;
-    @include main-text(1.5em, 600);
+    @include main-text(1.4em, 600);
 }
 
 .subtitle {
@@ -35,6 +36,6 @@
 }
 
 .card_btn,
-.train_btn{
-justify-self: center;
+.train_btn {
+    @include btn;
 }
