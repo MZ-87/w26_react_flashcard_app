@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import style from './wordlist.module.scss'
 
-export default function Wordlist(props) {
+export default function Wordlist({ item }) {
+    console.log(item);
+    const { word, translate, transcription, tag } = item;
+
     const [isEditMode, setIsEditMode] = useState(false);
 
     const handleEditMode = () => {
@@ -11,13 +14,14 @@ export default function Wordlist(props) {
     const handleCancel = () => {
         setIsEditMode(!isEditMode);
     }
+
     const SaveCancelBtns = () => {
         return (
             <>
-                <input className={style.input} placeholder={props.word}></input>
-                <input className={style.input} placeholder={props.translate}></input>
-                <input className={style.input} placeholder={props.transcription}></input>
-                <input className={style.input} placeholder={props.tag}></input>
+                <input className={style.input} placeholder={word}></input>
+                <input className={style.input} placeholder={translate}></input>
+                <input className={style.input} placeholder={transcription}></input>
+                <input className={style.input} placeholder={tag}></input>
                 <div className={style.buttons}>
                     <button className={style.btn} >Сохранить</button>
                     <button className={style.btn} onClick={handleCancel}>Отмена</button>
@@ -29,10 +33,10 @@ export default function Wordlist(props) {
     const EditDeleteBtns = () => {
         return (
             <>
-                <div className={style.item}>{props.word}</div>
-                <div className={style.item}>{props.translate}</div>
-                <div className={style.item}>{props.transcription}</div>
-                <div className={style.item}>{props.tag}</div>
+                <div className={style.item}>{word}</div>
+                <div className={style.item}>{translate}</div>
+                <div className={style.item}>{transcription}</div>
+                <div className={style.item}>{tag}</div>
                 <div className={style.buttons}>
                     <button className={style.btn} onClick={handleEditMode}>Редактировать</button>
                     <button className={style.btn} >Удалить</button>
@@ -46,4 +50,5 @@ export default function Wordlist(props) {
             {isEditMode ? <SaveCancelBtns /> : <EditDeleteBtns />}
         </div >
     )
+    // return <div>{translate}</div>
 }

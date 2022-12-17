@@ -21,9 +21,9 @@ function App() {
     return (
       <>
         <ListHeader />
-        {words.map((word) => {
-          return <Wordlist key={word.id} word={word.word} translate={word.translate} transcription={word.transcription} tag={word.tag} />
-        })}
+        {words.map(item => (
+          <Wordlist key={item.id} item={{ ...item }} />
+        ))}
       </>
     )
   }
