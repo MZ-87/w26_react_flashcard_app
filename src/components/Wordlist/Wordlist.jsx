@@ -15,7 +15,7 @@ export default function Wordlist({ item }) {
         setIsEditMode(!isEditMode);
     }
 
-    const SaveCancelBtns = () => {
+    const saveCancelBtns = () => {
         return (
             <>
                 <input className={style.input} placeholder={word}></input>
@@ -30,7 +30,7 @@ export default function Wordlist({ item }) {
         )
     }
 
-    const EditDeleteBtns = () => {
+    const editDeleteBtns = () => {
         return (
             <>
                 <div className={style.item}>{word}</div>
@@ -47,8 +47,7 @@ export default function Wordlist({ item }) {
 
     return (
         <div className={style.container}>
-            {isEditMode ? <SaveCancelBtns /> : <EditDeleteBtns />}
+            {isEditMode ? saveCancelBtns() : editDeleteBtns()}
         </div >
     )
-    // return <div>{translate}</div>
 }

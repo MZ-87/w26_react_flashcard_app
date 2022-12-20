@@ -2,31 +2,17 @@ import React from 'react'
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link
+  Route
 } from 'react-router-dom'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import Banner from '../Banner/Banner'
 import Error from '../Error/Error'
 import Wordcard from '../Wordcard/Wordcard'
-import ListHeader from '../ListHeader/ListHeader'
-import Wordlist from '../Wordlist/Wordlist'
-import Button from '../Button/Button'
-import words from '../data/words.json'
+import List from '../List/List'
 import style from './app.module.scss'
 
 function App() {
-  const List = () => {
-    return (
-      <>
-        <ListHeader />
-        {words.map(item => (
-          <Wordlist key={item.id} item={{ ...item }} />
-        ))}
-      </>
-    )
-  }
   return (
     <Router>
       <div className={style.App}>

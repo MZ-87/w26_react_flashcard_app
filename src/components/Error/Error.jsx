@@ -1,9 +1,6 @@
 import React from 'react'
 // import Button from '../Button/Button'
 import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
     Link
 } from 'react-router-dom'
 import style from './error.module.scss'
