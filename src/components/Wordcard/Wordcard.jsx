@@ -2,7 +2,7 @@ import React from 'react'
 import BtnTranslate from '../BtnTranslate/BtnTranslate'
 import style from './wordcard.module.scss'
 
-export default function Wordcard(props) {
+/* export default function Wordcard(props) {
   return (
     <div className={style.main}>
       <div className={style.container}>
@@ -16,6 +16,19 @@ export default function Wordcard(props) {
         <button className={style.next_btn}><img src="./assets/arrow_forward_icon.png" alt="arrow forward" className={style.nav_btn} /></button>
       </div>
     </div>
+  )
+} */
+
+export default function Wordcard({ item }) {
+  const { word, transcription, translate } = item
+  return (
+
+    <div className={style.wordbox}>
+      <h3 className={style.word}>{word}</h3>
+      <h3 className={style.transcription}>{transcription}</h3>
+      <BtnTranslate translate={translate} />
+    </div >
+
   )
 }
 

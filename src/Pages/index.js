@@ -1,7 +1,7 @@
 import Home from './Home';
-import Wordlist from './Wordlist';
+import Table from './Table';
 import Cards from './Cards';
 import Training from './Training';
-import Error from './Error' ;
+import Err from './Err' ;
 
-export {Home, Wordlist, Cards, Training, Error}
+export {Home, Table, Cards, Training, Err}
