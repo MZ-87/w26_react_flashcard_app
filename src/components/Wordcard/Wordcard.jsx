@@ -21,14 +21,13 @@ import style from './wordcard.module.scss'
 
 export default function Wordcard({ item }) {
   const { word, transcription, translate } = item
-  return (
 
+  return (
     <div className={style.wordbox}>
       <h3 className={style.word}>{word}</h3>
       <h3 className={style.transcription}>{transcription}</h3>
       <BtnTranslate translate={translate} />
     </div >
-
   )
 }
 

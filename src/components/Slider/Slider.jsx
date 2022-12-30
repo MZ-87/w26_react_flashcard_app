@@ -7,46 +7,47 @@ import { useState, useEffect } from 'react'
 
 export default function Slider() {
     const [cards, setCards] = useState(false)
-    const [slideIndex, setSlideIndex] = useState(0)
+    const [clicked, setClicked] = useState(false)
+    const [cardIndex, setCardIndex] = useState(0)
 
-    //в useEffect должна быть асинхронная функция. выполняющая запрос на сервер 
-    //и возвращающая массив с данными. Потом этот массив присваивается переменной users
     useEffect(() => {
         setCards(words)
     }, [])
 
 
-    function prevSlide() {
-        let index = slideIndex;
+    function prevCard() {
+        let index = cardIndex;
 
         if (index !== 0) {
             index--;
-            setSlideIndex(index);
+            setCardIndex(index);
         } else if (index === 0) {
-            setSlideIndex(cards.length - 1);
+            setCardIndex(cards.length - 1);
         }
+        setClicked(false)
     }
 
-    function nextSlide() {
-        let index = slideIndex;
+    function nextCard() {
+        let index = cardIndex;
 
         if (index !== cards.length - 1) {
             index++;
-            setSlideIndex(index);
+            setCardIndex(index);
         } else if (index === cards.length - 1) {
-            setSlideIndex(0);
+            setCardIndex(0);
         }
+        setClicked(false)
     }
 
     if (!cards) {
         return <h1>Loading...</h1>
     }
     return (
-        <div className={style.container}>
-            <div className={style.main}>
-                <button onClick={prevSlide} className={style.prev_btn}><img src="./assets/arrow_back_icon.png" alt="arrow back" className={style.nav_btn} /></button>
-                <Wordcard item={cards[slideIndex]} />
-                <button onClick={nextSlide} className={style.next_btn}><img src="./assets/arrow_forward_icon.png" alt="arrow forward" className={style.nav_btn} /></button>
+        <div className={style.main}>
+            <div className={style.container}>
+                <button onClick={prevCard} className={style.prev_btn}><img src="./assets/arrow_back_icon.png" alt="arrow back" className={style.nav_btn} /></button>
+                <Wordcard item={cards[cardIndex]} />
+                <button onClick={nextCard} className={style.next_btn}><img src="./assets/arrow_forward_icon.png" alt="arrow forward" className={style.nav_btn} /></button>
             </div >
         </div >
     )

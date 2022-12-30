@@ -1,12 +1,6 @@
 @import "../../style/variables.scss";
 @import "../../style/mixins.scss";
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    min-width: 90%;
-}
-
 .main {
     background: $bg-color;
     display: flex;
@@ -16,8 +10,18 @@
     flex-flow: column wrap;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    min-width: 90%;
+}
+
 .prev_btn,
 .next_btn {
     background-color: $bg-color;
     border: none;
+}
+
+.nav_btn {
+    max-height: 50px;
 }
