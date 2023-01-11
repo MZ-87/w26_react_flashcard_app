@@ -18,5 +18,26 @@
         "transcription": "[ˈæŋkl̩]",
         "translate": "голеностоп",
         "tag": "анатомия"
+    },
+    {
+        "id": 4,
+        "word": "answer",
+        "transcription": "[ˈæŋkl̩]",
+        "translate": "ответ",
+        "tag": "слова"
+    },
+    {
+        "id": 5,
+        "word": "aunt",
+        "transcription": "[ˈæŋkl̩]",
+        "translate": "тётя",
+        "tag": "родственные связи"
+    },
+    {
+        "id": 6,
+        "word": "ant",
+        "transcription": "[ˈæŋkl̩]",
+        "translate": "муравей",
+        "tag": "насекомые"
     }
 ]
