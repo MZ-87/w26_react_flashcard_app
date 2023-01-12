@@ -23,7 +23,7 @@ function App() {
           <Route path="/" element={<Banner />}></Route>
           <Route path="/wordlist" element={<List />}>Список слов</Route>
           <Route path="/cards" element={<Slider words={words} />}>Карточки</Route>
-          <Route path='/training' element={<Quiz />}>Тренировка</Route>
+          <Route path='/training' element={<Quiz words={words} />}>Тренировка</Route>
           <Route path="*" element={<Error />}></Route>
         </Routes>
         <Footer />
