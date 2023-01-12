@@ -1,4 +1,5 @@
 import React from 'react'
+// eslint-disable-next-line
 import words from '../data/words.json'
 import style from './quiz.module.scss'
 
