@@ -10,7 +10,7 @@ export default function Slider({ words }) {
     // const [cards, setCards] = useState(words)
     const [pressed, setPressed] = useState(false)
     const [cardIndex, setCardIndex] = useState(0)
-    const [learnedWords, setLearnedWords] = useState(0);
+    const [learned, setLearned] = useState(0);
 
     // useEffect(() => {
     //     setCards(words)
@@ -41,7 +41,11 @@ export default function Slider({ words }) {
     }
 
     const countWords = () => {
-        setLearnedWords(learnedWords + 1);
+        let learnedWords = learned;
+
+        if (learnedWords !== words.length) {
+            setLearned(learnedWords + 1);
+        }
     };
 
     // if (!cards) {
@@ -61,7 +65,7 @@ export default function Slider({ words }) {
                     countWords={countWords} />
                 <button onClick={showNextCard} className={style.next_btn}><img src="./assets/arrow_forward_icon.png" alt="arrow forward" className={style.nav_btn} /></button>
             </div >
-            <div className={style.word_counter}>Выучено слов: {learnedWords}/{words.length - 1}</div>
+            <div className={style.word_counter}>Выучено слов: {learned}/{words.length}</div>
         </div >
     )
 }
