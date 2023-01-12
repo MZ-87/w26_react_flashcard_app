@@ -4,6 +4,7 @@ import {
   Route
 } from 'react-router-dom'
 // import { Home, Table, Cards, Training, Error } from './Pages'
+import words from '../data/words.json'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import Banner from '../Banner/Banner'
@@ -21,7 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Banner />}></Route>
           <Route path="/wordlist" element={<List />}>Список слов</Route>
-          <Route path="/cards" element={<Slider />}>Карточки</Route>
+          <Route path="/cards" element={<Slider words={words} />}>Карточки</Route>
           <Route path='/training' element={<Quiz />}>Тренировка</Route>
           <Route path="*" element={<Error />}></Route>
         </Routes>
