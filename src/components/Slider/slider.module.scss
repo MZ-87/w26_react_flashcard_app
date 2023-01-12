@@ -25,3 +25,8 @@
 .nav_btn {
     max-height: 50px;
 }
+
+.word_counter{
+    @include main-text (1.2em, 700);
+    margin-top: 2em;
+}
