@@ -18,10 +18,10 @@ export default function Wordlist({ item }) {
     const saveCancelBtns = () => {
         return (
             <>
-                <input className={style.input} placeholder={word}></input>
-                <input className={style.input} placeholder={translate}></input>
-                <input className={style.input} placeholder={transcription}></input>
-                <input className={style.input} placeholder={tag}></input>
+                <input className={style.input} placeholder='Введите слово' defaultValue={word}></input>
+                <input className={style.input} placeholder='Введите перевод' defaultValue={translate}></input>
+                <input className={style.input} placeholder='Введите транскрипцию' defaultValue={transcription}></input>
+                <input className={style.input} placeholder='Введите категорию' defaultValue={tag}></input>
                 <div className={style.buttons}>
                     <button className={style.btn} >Сохранить</button>
                     <button className={style.btn} onClick={handleCancel}>Отмена</button>
